@@ -1,0 +1,5 @@
+# Software Testing as a Career Path
+
+1. Hal yang harus dilakukan oleh seorang Software tester adalah memahami dokumen pada software, membuat test cases, mengeksekusi test, melaporkan dan re-testing bug atau kecacatan, menghadiri review meeting dan aktivitas tim lain. 
+2. Skill yang dibutuhkan oleh software tester adalah non-technical skill (analitycal skill, communication skill, time management dan organization skill, attitude yang baik, dan passion), technical skill (pengetahuan dasar dari UNIX/Linux Commands, menguasai test management tools, menguasai tracking management tools, dan menguasai automation testing tools). 
+3. Karir seorang software tester dimulai dari junior Quality Engineer sampai dengan Quality Engineer manager. Alternatif pekerjaan bagi seorang software tester adalah perfomance tester, penetration tester, sistem analyst, dan scrum master.  
