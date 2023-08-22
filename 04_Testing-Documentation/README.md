@@ -1,0 +1,5 @@
+# Testing Documentation
+
+- Test Scenario: test scenario ini merupakan sebuah gambaran tentang apa saja yang akan dan dapat diuji pada suatu software, contoh dari test scenario adalah menguji fitur login, menguji fitur lupa password, menguji fitur registrasi, menguji fitur komentar, dan lain sebagainya. 
+- Test Case: sebuah test yang merupakan bagian dari test scenario. misalnya pada test scenario kita ingin menguji fitur login. sehingga eksekusinya pada test case ialah memasukkan berbagai kemungkinan yang dapat terjadi selama berada pada fitur login, seperti memasukkan username/email valid dan password valid pada percobaan pertama, sedangkan pada percobaan kedua dimasukkan valid usename/email dan invalid password, dan seterusnya. 
+- Sehingga, kedua test tersebut merupakan test yang bersifat satu-kesatuan, dimana test scenario merupakan sebuah test yang bertujuan untuk mengetahui apa saja fitur yang akan dan dapat diuji pada suatu software, sedangkan test case merupakan test yang bertujuan untuk mengeksekusi gambaran dari test scenario atau bagaimana test tersebut dijalankan. 
