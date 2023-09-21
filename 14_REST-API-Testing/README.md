@@ -1,0 +1,5 @@
+# REST API Testing
+
+1. API merupakan sekumpulan kelas/fungsi/prosedur yang mewakili bussiness logic layer. API merupakan salah satu test yang sangat penting dalam software engineering. Jika API tidak diuji dengan baik dan benar, maka dapat menyebabkan masalah bukan hanya pada Aplikasi API namun juga pada calling application. Tools yang biasa digunakan untuk API TEsting diantaranya, POSTMAN, Katalon, frisby.js, dan lain sebagainya. 
+2. Keuntungan dari API Testing adalah efisiensi waktu, menggunakan bahasa yang independen, mengurangi biaya testing, dan mengurangi resiko.
+3. Perbedaan unit test dengan API Test adalah Unit Test (Dilakukan oleh developer, fungsi-fungsi terpisah, developer dapat mengakses keseluruhan code, yang dites hanya fungsi dasarnya, scopenya terbatas, dan biasanya dilakukan sebelum build). API Test (Tester Perform it, end to end, tidak dapat mengakses code, yang di tes hanya fungsi APInya saja, semua fungsional issue, scopenya lebih luas, dan dilakukan setelah build).
