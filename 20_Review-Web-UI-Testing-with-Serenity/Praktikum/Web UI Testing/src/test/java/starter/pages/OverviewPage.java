@@ -1,7 +1,7 @@
 package starter.pages;
 
 import net.serenitybdd.core.pages.PageObject;
-import net.thucydides.core.annotations.Step;
+import net.serenitybdd.annotations.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
