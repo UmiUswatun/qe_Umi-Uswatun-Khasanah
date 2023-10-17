@@ -1,0 +1,5 @@
+# WEB UI TESTING WITH SERENITY
+
+1. Serenity merupakan library open source yang membantu tester dalam menulis automation acceptance test yang terstruktur dan terawat dengan baik. Serenity memiliki arsitektur yang terdiri dari requirement (biasa disebut sebagai "cerita" pengguna dengan kriteria penerimaan yang membantu memperjelas requirement, contohnya feature), test, steps, pages, dan reports (serenity menyediakan reports yang lebih detai diantaranya narative pada setiap test, terdapat screenshots, dan durasi eksekusi tiap test). 
+2. BDD dengan cucumber memiliki step yakni, write story(berisi syntax gherkin), configure stories, browser interaction, run stories, dan view report. 
+3. Writing test berisi serenity cucumber, create file stories, create file test class, create file test step, dan create file page object.   

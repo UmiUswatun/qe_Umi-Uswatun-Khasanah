@@ -1,0 +1,5 @@
+# Fundamental Performance Test 
+
+1. Fundamental Performance Test  merupakan non functional testing untuk menentukan parameter sistem dalam hal responsif dan stabilitas di bawah berbagai beban sehinngga dapat digunakan untuk mengukur kualitas atribut dari sistem seperti stabilitas, ketahanan, dan penggunaan sumber daya. 
+2. Fundamental Performance Test memiliki kendala yakni membutuhkan biaya yang cukup mahal karena membutuhkan penyimpanan cloud yang sangat besar, hal ini di dasari oleh environment untuk testing di pisah dengan environment produksi. 
+3. Jenis-jenis Fundamental Performance Test smoke testing(untuk memastikan ada tidaknya masalah pada script yang teah dibuat), load testing (untuk menentukan perilaku sistem saat kondisi normal dan puncak), stress testing (untuk mengamati kestabilan sistem saat kondisi ekstrim), spike testing (sama dengan stress testing, yang membedakan adalah beban yang diberikan langsung melebihi batas dalam waktu singkat), soak testing (mengetahui reabilitas sistem saat tekanan di bawah puncak dalam kurun waktu yang panjang), volume test (sama dengan load testing hanya saja objeknya pada volume testing adalah database saja).
