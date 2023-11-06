@@ -1,0 +1,5 @@
+# What Is AI for QA 
+
+1. Latar belakang digunakannya AI untuk QA adalah pembuatan test case dan test scenario masih dilakukan secara manual sehingga membutuhkan waktu yang cukup lama dan kurang efisien. Selain itu, pengecekan kode program untuk menemukan bug juga membutuhkan waktu yang cukup lama sehingga dinilai kurang efisien. Sehingga AI memiliki kegunaan dalam QA yakni untuk automation testing, defect prediction, code analisis, dan debugging. 
+2. Keuntungan dan tantang AI bagi para QA. Keuntungan yang didapat antara lain adalah efisiensi dan akurasi, peningkatan kualitas software, pengurangan dalam proses manual, dan pendeteksian bug lebih awal. Sedangkan tantangan AI antara lain kualitas data dan potensi terjadinya bias, keamanan atau privasi, kurangnya pengawasan, dan masalah transparansi. 
+3. Meskipun AI sangat berguna dalam proses testing, namun AI tidak dapat menggantikan seorang QA dalam proses testing, karena dalam testing bukan hanya tentang penemuan suatu bug, namun terdapat aspek-aspek lain seperti user experince selama menggunakan software tersebut, pengawasan, keamanan, transparansi dan lain sebagainya. 
