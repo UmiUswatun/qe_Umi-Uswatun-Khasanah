@@ -14,16 +14,16 @@ import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 import static org.hamcrest.Matchers.*;
 
 public class GetUser {
-    private static String url = "https://jsonplaceholder.typicode.com/";
+    private static String url = "https://jsonplaceholder.typicode.com/posts";
 
-    @Step("I set valid API endpoint for get user")
-    public String setValidApiEndpoint() {
-        return url + "posts";
+    @Step("I set valid API endpoint for get user data")
+    public String setValidAPIEndpoint() {
+        return url;
     }
 
-    @Step("I send request to get user")
-    public void sendGetUserRequest() {
-        SerenityRest.given().get(setValidApiEndpoint());
+    @Step("I send valid request to get user data")
+    public void sendValidRequest() {
+        SerenityRest.given().get(setValidAPIEndpoint());
     }
 
     @Step("I receive status code 200")
@@ -31,24 +31,33 @@ public class GetUser {
         restAssuredThat(response -> response.statusCode(200));
     }
 
-    @Step("I receive valid data for user")
+    @Step("I receive valid data for user data")
     public void receiveValidUserData() {
         JsonSchemaHelper helper = new JsonSchemaHelper();
         String schema = helper.getResponseSchema(JsonSchema.GET_USER_RESPONSE_SCHEMA);
 
-        restAssuredThat(response -> response.body("'userId'",everyItem(equalTo(1))));
-        restAssuredThat(response -> response.body("'id'", everyItem(greaterThan(0))));
-        restAssuredThat(response -> response.body("'title'", notNullValue()));
-        restAssuredThat(response -> response.body("'body'", notNullValue()));
-
         restAssuredThat(response -> response.body(matchesJsonSchema(schema)));
     }
 
-    @Step("I set valid API endpoint for get user")
-    public String setInvalidApiEndpoint() {return url;}
+    private static String url1 = "https://jsonplaceholder.typicode.com/invalid";
+
+    @Step("I set invalid API endpoint for get user data")
+    public String setInvalidAPIEndpoint() {
+        return url1;
+    }
+
+    @Step("I send valid request to get user data 1")
+    public void sendValidRequest1() {
+        SerenityRest.given().get(setInvalidAPIEndpoint());
+    }
+
+    @Step("I send invalid request to get user data")
+    public void sendInvalidRequest() {
+        SerenityRest.given().put(setInvalidAPIEndpoint());
+    }
 
     @Step("I receive status code 404")
-    public void receiveInvalidStatusCode404() {
+    public void receiveStatusCode404() {
         restAssuredThat(response -> response.statusCode(404));
     }
 

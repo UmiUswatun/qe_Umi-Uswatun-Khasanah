@@ -10,5 +10,5 @@ Feature: Delete user
 
   Scenario: As a user I can not delete user with invalid API endpoint
     Given I set invalid API endpoint for delete user
-    When I send request to delete user
+    When I send request to delete user 1
     Then I receive status code 404

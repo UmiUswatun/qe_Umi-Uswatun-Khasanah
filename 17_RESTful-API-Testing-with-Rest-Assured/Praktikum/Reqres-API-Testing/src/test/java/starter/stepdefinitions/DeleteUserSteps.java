@@ -12,13 +12,18 @@ public class DeleteUserSteps {
     DeleteUser deleteUser;
 
     @Given("I set valid API endpoint for delete user")
-    public void setApiEndpoint() {
-        deleteUser.setApiEndpoint();
+    public void setValidAPIEndpoint() {
+        deleteUser.setValidAPIEndpoint();
     }
 
     @When("I send request to delete user")
-    public void sendDeleteUserRequest() {
-        deleteUser.sendDeleteUserRequest();
+    public void sendValidRequest() {
+        deleteUser.sendValidRequest();
+    }
+
+    @When("I send request to delete user 1")
+    public void sendValidRequest1() {
+        deleteUser.sendValidRequest1();
     }
 
     @Given("I set invalid API endpoint for delete user")

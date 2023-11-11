@@ -1,12 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "$ref": "#/definitions/Welcome",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/WelcomeElement"
+  },
   "definitions": {
-    "Welcome": {
+    "WelcomeElement": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "userId": {
+          "type": "integer"
+        },
+        "id": {
           "type": "integer"
         },
         "title": {
@@ -22,7 +28,7 @@
         "title",
         "userId"
       ],
-      "title": "Welcome"
+      "title": "WelcomeElement"
     }
   }
 }

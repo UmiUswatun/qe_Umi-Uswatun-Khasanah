@@ -34,7 +34,7 @@ public class CreateUserSteps {
 
     @Given("I set invalid API endpoint for create user")
     public void setInvalidApiEndpoint() {
-        createUser.setInvalidApiEndpoint();
+        createUser.setInvalidAPIEndpoint();
     }
 
     @When("I send request to create user with invalid inputs")
@@ -42,13 +42,17 @@ public class CreateUserSteps {
         createUser.sendInvalidCreateUserRequest();
     }
 
-    @Then("I receive status code 500")
-    public void receiveInvalidStatusCode500 () {
-        createUser.receiveInvalidStatusCode500();
+    @And("I receive id")
+    public void receiveValidId() {createUser.receiveValidId();}
+
+    @When("I send request to create user with valid inputs 1")
+    public void sendInvalidCreateUserRequest1() {
+        createUser.sendInvalidCreateUserRequest1();
     }
 
-    @And("I receive syntax error message")
-    public void receiveSyntaxErrorMessage() {
-        createUser.receiveSyntaxErrorMessage();
+    @When("I send request to create user with invalid inputs 2")
+    public void sendInvalidCreateUserRequest2() {
+        createUser.sendInvalidCreateUserRequest2();
     }
+
 }

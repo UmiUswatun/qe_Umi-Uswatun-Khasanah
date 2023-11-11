@@ -6,25 +6,26 @@ import net.thucydides.core.annotations.Step;
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 
 public class DeleteUser {
-    private static String url = "https://jsonplaceholder.typicode.com/";
+    private static String url = "https://jsonplaceholder.typicode.com/posts/1";
 
     @Step("I set valid API endpoint for delete user")
-    public String setApiEndpoint() {
-        return url + "posts/1 ";
+    public String setValidAPIEndpoint() {
+        return url;
     }
 
     @Step("I send request to delete user")
-    public void sendDeleteUserRequest() {
-        SerenityRest.given().delete(setApiEndpoint());
+    public void sendValidRequest() {
+        SerenityRest.given().delete(setValidAPIEndpoint());
     }
 
-    @Step("I receive status code 200")
-    public void receiveStatusCode200() {
-        restAssuredThat(response -> response.statusCode(200));
-    }
-
+    private static String url1 = "https://jsonplaceholder.typicode.com/invalid";
     @Step("I set invalid API endpoint for delete user")
     public String setInvalidApiEndpoint() {
-        return url + "";
+        return url1;
+    }
+
+    @Step("I send request to delete user 1")
+    public void sendValidRequest1() {
+        SerenityRest.given().delete(setInvalidApiEndpoint());
     }
 }
