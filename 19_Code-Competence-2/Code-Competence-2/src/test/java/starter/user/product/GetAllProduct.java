@@ -32,12 +32,11 @@ public class GetAllProduct {
     private static String url1 = "https://fakestoreapi.com/invalid";
 
     @Step("I set invalid API endpoint for data product")
-    public void setInvalidAPIEndpointForDataProduct(){
-    }
+    public String setInvalidAPIEndpointForDataProduct(){return url1;}
 
     @Step("I send invalid request")
     public void sendInvalidRequest () {
-        SerenityRest.given().get(url1);
+        SerenityRest.given().get(setInvalidAPIEndpointForDataProduct());
     }
 
     @Step("I receive status code 404")

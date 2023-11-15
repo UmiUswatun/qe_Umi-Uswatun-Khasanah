@@ -1,5 +1,6 @@
 package starter.user.cart;
 
+import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import starter.utils.JsonSchema;
 import starter.utils.JsonSchemaHelper;
@@ -13,6 +14,11 @@ public class GetCart {
     @Step("I set valid API endpoint for get cart data")
     public String setValidAPIEndpointForGetCartData() {
         return urlcart + "carts";
+    }
+
+    @Step("I send valid request for delete cart")
+    public void sendValidRequest () {
+        SerenityRest.given().get(setValidAPIEndpointForGetCartData());
     }
 
     @Step("I receive status code 200")
@@ -33,5 +39,10 @@ public class GetCart {
     @Step("I set invalid API endpoint for get cart data")
     public String setInvalidAPIEndpointForGetCartData(){
         return urlinvcart;
+    }
+
+    @Step("I send invalid request for get new cart")
+    public void sendInvalidRequest() {
+        SerenityRest.given().delete(setInvalidAPIEndpointForGetCartData());
     }
 }

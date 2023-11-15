@@ -6,7 +6,7 @@ Feature: User Login
   Scenario:  As a user i can get the token for login with valid API and valid input
     Given I set valid API endpoint
     When I send request with valid input
-    Then I receive status code 200 for login
+    Then I receive status code 200
     And I get the token for login
 
   Scenario:  As a user i can not get the token for login with valid API and invalid input

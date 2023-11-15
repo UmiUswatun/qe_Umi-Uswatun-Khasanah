@@ -1,5 +1,6 @@
 package starter.user.user;
 
+import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import starter.utils.JsonSchema;
 import starter.utils.JsonSchemaHelper;
@@ -17,6 +18,10 @@ public class DeleteUser {
         return urldeluser + "users/6";
     }
 
+    @Step("I send valid request for delete user")
+    public void sendValidRequest() {
+        SerenityRest.given().delete(setValidAPIEndpointForDeleteUser());}
+
     @Step("I can delete user data")
     public void canDeleteUserData() {
         JsonSchemaHelper helper = new JsonSchemaHelper();
@@ -30,4 +35,8 @@ public class DeleteUser {
     public String setInvalidAPIEndpointForDeleteUserData() {
         return urlinvdeluser;
     }
+
+    @Step("I send invalid request for delete user")
+    public void sendInvalidRequest() {
+        SerenityRest.given().delete(setInvalidAPIEndpointForDeleteUserData());}
 }

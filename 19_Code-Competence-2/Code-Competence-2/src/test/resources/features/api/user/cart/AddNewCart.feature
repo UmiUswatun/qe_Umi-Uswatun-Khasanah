@@ -6,7 +6,7 @@ Feature: Add new cart
   Scenario:  As a user i can add new cart with valid API and valid input
     Given I set valid API endpoint for add new cart
     When I send request for add new cart with valid input
-    Then I receive status code 200 for add new cart
+    Then I receive status code 200
     And I can add new cart
 
   Scenario:  As a user i can not add new cart with valid API and invalid input

@@ -22,10 +22,7 @@ public class AddNewCartSteps {
         addCart.sendValidRequestForAddNewCart();
     }
 
-    @Then("I receive status code 200 for add new cart")
-    public void receiveCodeForAddCart200() {
-        addCart.receiveCodeForAddCart200();
-    }
+
 
     @And("I can add new cart")
     public void addNewCart() {

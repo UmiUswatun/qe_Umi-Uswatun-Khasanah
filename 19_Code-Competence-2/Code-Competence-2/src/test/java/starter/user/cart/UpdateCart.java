@@ -4,6 +4,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import starter.utils.JsonSchema;
 import starter.utils.JsonSchemaHelper;
@@ -23,11 +24,23 @@ public class UpdateCart {
     @Step("I send request for update cart data with valid input")
     public void sendValidRequestForUpdateCart() {
         JSONObject requestBody = new JSONObject();
+        JSONArray productsArray = new JSONArray();
+
+
+        requestBody.put("userId", 3);
+        requestBody.put("date", "2019-12-10");
+
+        JSONObject product1 = new JSONObject();
+        product1.put("productId", 1);
+        product1.put("quantity", 3);
+        productsArray.put(product1);
+
+        requestBody.put("products", productsArray);
 
         Response response = RestAssured.given()
                 .header("contentType", "application/json")
                 .body(requestBody)
-                .put(urlcartupdate);
+                .put(setValidAPIEndpointForUpdateCart());
     }
 
     @Step("I can update cart data")
@@ -52,7 +65,7 @@ public class UpdateCart {
         Response response = RestAssured.given()
                 .header("contentType", "application/json")
                 .body(requestBody)
-                .put(urlcartinv);
+                .put(setInvalidAPIEndpointForUpdateCart());
     }
 
 }

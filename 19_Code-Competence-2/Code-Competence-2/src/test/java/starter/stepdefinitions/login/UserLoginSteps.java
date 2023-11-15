@@ -22,11 +22,6 @@ public class UserLoginSteps {
         userlogin.sendValidRequest();
     }
 
-    @Then("I receive status code 200 for login")
-    public void receiveStatusCode200ForLogin() {
-        userlogin.receiveStatusCode200ForLogin();
-    }
-
     @And("I get the token for login")
     public void getTheToken() {
         userlogin.getTheToken();
@@ -46,4 +41,5 @@ public class UserLoginSteps {
     public void getErrorMessage(){
         userlogin.getErrorMessage();
     }
+
 }

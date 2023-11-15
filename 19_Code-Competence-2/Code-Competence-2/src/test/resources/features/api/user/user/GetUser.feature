@@ -5,12 +5,12 @@ Feature: Get User
 
   Scenario: As a user i can get user data with valid URL
     Given I set valid API endpoint for get user data
-    When I send valid request
+    When I send valid request for get user
     Then I receive status code 200
     And I get valid user data
 
   Scenario: As a user i can not get user data with invalid URL
     Given I set invalid API endpoint for get user data
-    When I send invalid request
+    When I send invalid request for get user
     Then I receive status code 404
     And I got an error message

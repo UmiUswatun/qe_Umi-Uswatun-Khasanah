@@ -16,6 +16,10 @@ public class GetUser {
         return url + "users";
     }
 
+    @Step("I send valid request for get user")
+    public void sendValidRequest() {
+        SerenityRest.given().get(setValidAPIEndpointForGetUserData());}
+
     @Step("I get valid user data")
     public void getValidUserData() {
         JsonSchemaHelper helper = new JsonSchemaHelper();
@@ -27,6 +31,10 @@ public class GetUser {
     private static String url1 = "https://fakestoreapi.com/invalid";
 
     @Step("I set invalid API endpoint for get user data")
-    public void setInvalidAPIEndpointForGetUserData(){
+    public String setInvalidAPIEndpointForGetUserData(){ return url1;
     }
+
+    @Step("I send invalid request for get user")
+    public void sendInvalidRequest() {
+        SerenityRest.given().get(setInvalidAPIEndpointForGetUserData());}
 }

@@ -33,7 +33,7 @@ public class UpdateAProduct {
         Response response = RestAssured.given()
                 .header("contentType", "application/json")
                 .body(requestBody)
-                .put(url4);
+                .put(setValidAPIEndpointForUpdateProduct());
     }
 
     @Step("I can update a product")
@@ -47,13 +47,7 @@ public class UpdateAProduct {
     private static String url5 = "https://fakestoreapi.com/invalid";
 
     @Step("I set invalid API endpoint for update a product")
-    public void setInvalidAPIEndpointForUpdateProduct() {
-        JSONObject requestBody = new JSONObject();
-
-        SerenityRest.given()
-                .header("Content-Type", "application/json")
-                .body(requestBody.toString())
-                .put(url5);
+    public String setInvalidAPIEndpointForUpdateProduct() {return url5;
     }
 
     @Step("I send request for update a product with invalid input")
@@ -63,7 +57,7 @@ public class UpdateAProduct {
         Response response = RestAssured.given()
                 .header("contentType", "application/json")
                 .body(requestBody)
-                .put(url4);
+                .put(setInvalidAPIEndpointForUpdateProduct());
     }
 
 }

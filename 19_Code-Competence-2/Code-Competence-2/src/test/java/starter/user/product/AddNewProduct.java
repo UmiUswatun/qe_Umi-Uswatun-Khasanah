@@ -32,7 +32,7 @@ public class AddNewProduct {
         Response response = RestAssured.given()
                 .header("contentType", "application/json")
                 .body(requestBody)
-                .post(url2);
+                .post(setValidAPIEndpointForAddNewProduct());
     }
 
     @Step("I can add new product")
@@ -46,7 +46,7 @@ public class AddNewProduct {
     private static String url3 = "https://fakestoreapi.com/invalid";
 
     @Step("I set invalid API endpoint for add new product")
-    public void sendInvalidRequestForAddNewProduct(){
+    public String sendInvalidRequestForAddNewProduct(){return url3;
     }
 
     @Step("I set invalid API endpoint for add new product")
@@ -56,7 +56,7 @@ public class AddNewProduct {
         SerenityRest.given()
                 .header("Content-Type", "application/json")
                 .body(requestBody.toString())
-                .post(url3);
+                .post(sendInvalidRequestForAddNewProduct());
     }
 
 

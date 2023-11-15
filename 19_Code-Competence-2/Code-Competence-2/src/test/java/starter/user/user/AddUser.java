@@ -21,12 +21,40 @@ public class AddUser {
 
     @Step("I send request for add new user with valid input")
     public void sendValidRequestForAddNewUser() {
-        JSONObject requestBody = new JSONObject();
+        JSONObject userData = new JSONObject();
 
-        Response response = RestAssured.given()
+        userData.put("email", "John@gmail.com");
+        userData.put("username", "johnd");
+        userData.put("password", "m38rmF$");
+
+        JSONObject name = new JSONObject();
+        name.put("firstname", "John");
+        name.put("lastname", "Doe");
+
+        userData.put("name", name);
+
+        JSONObject address = new JSONObject();
+        address.put("city", "kilcoole");
+        address.put("street", "7835 new road");
+        address.put("number", 3);
+        address.put("zipcode", "12926-3874");
+
+        JSONObject geolocation = new JSONObject();
+        geolocation.put("lat", "-37.3159");
+        geolocation.put("long", "81.1496");
+
+        address.put("geolocation", geolocation);
+
+        userData.put("address", address);
+
+        userData.put("phone", "1-570-236-7033");
+
+
+
+        RestAssured.given()
                 .header("contentType", "application/json")
-                .body(requestBody)
-                .post(userurl);
+                .body(userData.toString())
+                .post(setValidAPIEndpointForAddUser());
     }
 
     @Step("I can add new user")
@@ -56,7 +84,7 @@ public class AddUser {
         SerenityRest.given()
                 .header("Content-Type", "application/json")
                 .body(requestBody.toString())
-                .post(url3);
+                .post(setInvalidAPIEndpointForAddNewUser());
     }
 
 

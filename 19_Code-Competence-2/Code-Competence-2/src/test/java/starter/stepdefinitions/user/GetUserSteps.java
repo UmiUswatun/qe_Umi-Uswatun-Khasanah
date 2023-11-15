@@ -18,10 +18,16 @@ public class GetUserSteps {
         getUser.setValidAPIEndpointForGetUserData();
     }
 
+    @When("I send valid request for get user")
+    public void sendValidRequest() {getUser.sendValidRequest();}
+
     @And("I get valid user data")
     public void getValidUserData() {
         getUser.getValidUserData();
     }
+
+    @When("I send invalid request for get user")
+    public void sendInvalidRequest() {getUser.sendInvalidRequest();}
 
     @Given("I set invalid API endpoint for get user data")
     public void setInvalidAPIEndpointForGetUserData(){
