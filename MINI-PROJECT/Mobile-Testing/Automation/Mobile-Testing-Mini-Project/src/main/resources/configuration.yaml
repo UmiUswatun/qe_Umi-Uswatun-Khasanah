@@ -1,0 +1,6 @@
+ appiumProperties:
+   platformName: android
+   deviceName: device
+   app: C:\Users\User\Downloads\app-debug.apk
+   automationName: UIAutomator2
+   autoGrantPermissions: true
